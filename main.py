@@ -18,3 +18,11 @@ dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv')
 # print out dining_3
 print(dining_3)
 
+# Fix import by including index_col
+dining_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col=1)
+
+# print out dining_1
+print(dining_1)
+
+# Print out name column as Pandas Series
+print(dining_1['name'])
