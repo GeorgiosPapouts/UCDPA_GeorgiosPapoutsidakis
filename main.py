@@ -27,3 +27,20 @@ print(dining_1)
 # Print out name column as Pandas Series
 print(dining_1['name'])
 
+
+# Sort dining_3 by descending latitude
+dining_3_lat = dining_3.sort_values('latitude', ascending=False)
+
+# print the top of the rows
+print(dining_3_lat.head())
+
+print(dining_2.head(5))
+
+# inner join of one and two-star-michelin-restaurants on city
+name_restaurants_12 = dining_1.merge(dining_2, on='city')
+print(name_restaurants_12.head(5))
+
+
+
+
+
