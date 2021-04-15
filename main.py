@@ -47,15 +47,14 @@ print(dining_3.isna().any())
 
 print(dining_3.isna().sum())
 
-# fill in missing values with 0
-
-dining_3_filled = dining_3.fillna(0)
-
-print(dining_3_filled)
-
 import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
 
-dining_3_filled.isna().sum().plot(kind='bar')
+dining_3.isna().sum().plot(kind='bar')
+
+# Customise the y  and x axis labels
+ax.set_ylabel('Number of missing values')
+ax.set_xlabel('type of dataset column')
 plt.show()
 
 
