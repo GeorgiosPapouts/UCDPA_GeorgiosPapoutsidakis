@@ -57,6 +57,40 @@ ax.set_ylabel('Number of missing values')
 ax.set_xlabel('type of dataset column')
 plt.show()
 
+# Fill all the missing values with 0 in dining_3
+
+dining_3_filled = dining_3.fillna(0)
+print(dining_3_filled)
+
+# Use slicing to get columns 7 to 8 from dining_2
+print(dining_2.iloc[:, 7:9])
+
+
+# Use the for loop
+michelin_1 = {'Bar Crenn' : 37.8,
+              'Nouri' : 1.28086,
+              'Fiola' :  38.9 }
+for key, value in michelin_1.items() :
+    print(key + 'has' + 'latitude' + str(value))
+
+# Import dining_1 data
+import pandas as pd
+dining_1_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col = 0)
+
+# Iterate over rows of cars
+for lab, row in dining_1_1.iterrows() :
+    print(lab)
+    print(row)
+
+
+
+
+
+
+
+
+
+
 
 
 
