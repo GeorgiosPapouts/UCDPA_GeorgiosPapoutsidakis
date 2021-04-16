@@ -80,7 +80,22 @@ dining_1_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col = 0)
 # Iterate over rows of cars
 for lab, row in dining_1_1.iterrows() :
     print(lab)
-    print(row)
+    print(row.head(10))
+
+
+# build DataFrame of names and cities from dining_2
+df_2 = pd.DataFrame(dining_2, columns=['name', 'city'])
+print(df_2.head(10))
+
+# build DataFrame of names and cities from dining_3
+df_3 = pd.DataFrame(dining_3, columns=['name', 'region'])
+print(df_3.head(12))
+
+# join DataFrames df_2 and df_3
+Joined_data = pd.merge_ordered(df_3, df_2, on='name', fill_method='ffill')
+print(Joined_data)
+
+
 
 
 
