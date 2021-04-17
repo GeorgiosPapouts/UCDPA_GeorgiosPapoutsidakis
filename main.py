@@ -95,6 +95,30 @@ print(df_3.head(12))
 Joined_data = pd.merge_ordered(df_3, df_2, on='name', fill_method='ffill')
 print(Joined_data)
 
+# Pivot for mean latitude for each year
+mean_latitude_by_year = dining_2.pivot_table(values = 'latitude', index = 'year')
+
+# Print mean_latitude_by_year
+print(mean_latitude_by_year)
+
+# Import package
+import numpy as np
+
+# Pivot for mean and median latitude for each year
+mean_med_latitude_by_year = dining_2.pivot_table(values = 'latitude', index = 'year', aggfunc = [np.mean, np.median])
+
+# print mean_med_latitude_by_year
+print(mean_med_latitude_by_year)
+
+
+
+
+
+
+
+
+
+
 
 
 
