@@ -140,6 +140,8 @@ mean_med_latitude_by_year = dining_3.pivot_table(values = 'latitude', index = 'y
 # print mean_med_latitude_by_year
 print(mean_med_latitude_by_year)
 
+dining_traits = ['Ikarus', 2019, 'latitude', 'longitude', 'city', 'region', 'zipCode', 'cuisine', 'price', 'url']
+print(dining_traits.append('url'))
 
 
 
