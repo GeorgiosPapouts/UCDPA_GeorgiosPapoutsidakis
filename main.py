@@ -52,9 +52,11 @@ fig, ax = plt.subplots()
 
 dining_3.isna().sum().plot(kind='bar')
 
-# Customise the y  and x axis labels
+# Customise the y  and x axis  and graph labels
 ax.set_ylabel('Number of missing values')
 ax.set_xlabel('type of dataset column')
+# Add the title
+ax.set_title('Missing values for columns data')
 plt.show()
 
 # Fill all the missing values with 0 in dining_3
@@ -142,6 +144,24 @@ print(mean_med_latitude_by_year)
 
 dining_traits = ['Ikarus', 2019, 'latitude', 'longitude', 'city', 'region', 'zipCode', 'cuisine', 'price', 'url']
 print(dining_traits.append('url'))
+
+
+# Create a list of dictionaries with new data
+dining_3_list = [
+    {'name': 'Alinea', 'longitude': -87.6480, 'city': 'Chicago'}, {'name': 'Le Bernardin', 'longitude': 8561348, 'city': 'New York'},
+]
+
+# Convert list into DataFrame
+dining_3_2019 = pd.DataFrame(dining_3_list)
+
+# Print the new DataFrame
+print(dining_3_2019)
+
+
+
+
+
+
 
 
 
