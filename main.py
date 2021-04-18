@@ -157,6 +157,15 @@ dining_3_2019 = pd.DataFrame(dining_3_list)
 # Print the new DataFrame
 print(dining_3_2019)
 
+# Import the one-star-michelin-restaurants.csv data: dining_2
+dining_2 = pd.read_csv('two-stars-michelin-restaurants.csv', index_col=0)
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.catplot(y='region',
+            data=dining_2,
+            kind='count')
+plt.show()
 
 
 
