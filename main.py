@@ -157,7 +157,7 @@ dining_3_2019 = pd.DataFrame(dining_3_list)
 # Print the new DataFrame
 print(dining_3_2019)
 
-# Import the one-star-michelin-restaurants.csv data: dining_2
+# Import the two-star-michelin-restaurants.csv data: dining_2
 dining_2 = pd.read_csv('two-stars-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -167,7 +167,25 @@ sns.catplot(y='region',
             kind='count')
 plt.show()
 
+# Import the three-star-michelin-restaurants.csv data: dining_3
+dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv', index_col=0)
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+sns.catplot(y='region',
+            data=dining_3,
+            kind='count')
+plt.show()
+
+# Import the one-star-michelin-restaurants.csv data: dining_1
+dining_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col=0)
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.catplot(y='region',
+            data=dining_1,
+            kind='count')
+plt.show()
 
 
 
