@@ -193,11 +193,20 @@ plt.show()
 # Import the one-star-michelin-restaurants.csv data: dining_3
 import matplotlib.pyplot as plt
 
+# Plot a bar chart of the latitude of the three-stars-michelin-restaurants
 dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv', index_col=0)
 fig, ax = plt.subplots()
 ax.bar(dining_3.index, dining_3['latitude'])
 ax.set_xticklabels(dining_3.index, rotation=90)
 ax.set_ylabel('Latitude')
+plt.show()
+
+# Plot a bar chart of the longitude of the three-stars-michelin-restaurants
+dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv', index_col=0)
+fig, ax = plt.subplots()
+ax.bar(dining_3.index, dining_3['longitude'])
+ax.set_xticklabels(dining_3.index, rotation=90)
+ax.set_ylabel('Longitude')
 plt.show()
 
 
