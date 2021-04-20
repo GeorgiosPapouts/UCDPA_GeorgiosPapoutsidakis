@@ -162,9 +162,10 @@ dining_2 = pd.read_csv('two-stars-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-sns.catplot(y='region',
+g=sns.catplot(y='region',
             data=dining_2,
             kind='count')
+g.fig.suptitle('Number of restaurants awarded two michelin stars')
 plt.show()
 
 # Import the three-star-michelin-restaurants.csv data: dining_3
@@ -172,9 +173,10 @@ dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-sns.catplot(y='region',
+g=sns.catplot(y='region',
             data=dining_3,
             kind='count')
+g.fig.suptitle('Number of restaurants awarded three michelin stars')
 plt.show()
 
 # Import the one-star-michelin-restaurants.csv data: dining_1
@@ -182,9 +184,10 @@ dining_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-sns.catplot(y='region',
+g=sns.catplot(y='region',
             data=dining_1,
             kind='count')
+g.fig.suptitle('Number of restaurants awarded one michelin star')
 plt.show()
 
 
