@@ -190,6 +190,19 @@ g=sns.catplot(y='region',
 g.fig.suptitle('Number of restaurants awarded one michelin star')
 plt.show()
 
+# Import the one-star-michelin-restaurants.csv data: dining_3
+import matplotlib.pyplot as plt
+
+dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv', index_col=0)
+fig, ax = plt.subplots()
+ax.bar(dining_3.index, dining_3['latitude'])
+ax.set_xticklabels(dining_3.index, rotation=90)
+ax.set_ylabel('Latitude')
+plt.show()
+
+
+
+
 
 
 
