@@ -209,6 +209,17 @@ ax.set_xticklabels(dining_3.index, rotation=90)
 ax.set_ylabel('Longitude')
 plt.show()
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.scatterplot(x='latitude',
+                y='longitude',
+                data=dining_3,
+                hue='region')
+plt.show()
+
+
+
 
 
 
