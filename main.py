@@ -165,7 +165,7 @@ import seaborn as sns
 g=sns.catplot(y='region',
             data=dining_2,
             kind='count')
-g.fig.suptitle('Number of restaurants awarded two michelin stars')
+g.fig.suptitle('Number of restaurants awarded two michelin stars in various regions')
 plt.show()
 
 # Import the three-star-michelin-restaurants.csv data: dining_3
@@ -176,7 +176,7 @@ import seaborn as sns
 g=sns.catplot(y='region',
             data=dining_3,
             kind='count')
-g.fig.suptitle('Number of restaurants awarded three michelin stars')
+g.fig.suptitle('Number of restaurants awarded three michelin stars in various regions')
 plt.show()
 
 # Import the one-star-michelin-restaurants.csv data: dining_1
@@ -187,7 +187,7 @@ import seaborn as sns
 g=sns.catplot(y='region',
             data=dining_1,
             kind='count')
-g.fig.suptitle('Number of restaurants awarded one michelin star')
+g.fig.suptitle('Number of restaurants awarded one michelin star in various regions')
 plt.show()
 
 # Import the one-star-michelin-restaurants.csv data: dining_3
@@ -211,6 +211,7 @@ ax.set_ylabel('Longitude')
 ax.set_title('Longitude of 3-star-michelin-restaurants')
 plt.show()
 
+# Search possible correlation between latitude and longitude of 3-michelin-stars-restaurants
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -221,13 +222,17 @@ sns.scatterplot(x='latitude',
 
 plt.show()
 
+# Plot how many restaurants were awarded two michelin stars in 2018 and 2019
 sns.countplot(x='year',
               data=dining_2).set(title='Awarded year of two-michelin-stars-restaurants')
 plt.show()
 
+# Plot how many restaurants were awarded one michelin stars in 2018 and 2019
 sns.countplot(x='year',
               data=dining_1).set(title='Awarded year of one-michelin-star-restaurants')
 plt.show()
+
+
 
 
 
