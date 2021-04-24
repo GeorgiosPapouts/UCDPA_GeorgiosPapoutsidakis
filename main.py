@@ -56,7 +56,7 @@ dining_3.isna().sum().plot(kind='bar')
 ax.set_ylabel('Number of missing values')
 ax.set_xlabel('type of dataset column')
 # Add the title
-ax.set_title('Missing values for columns data')
+ax.set_title('Missing values for columns data from 3-michelin-stars-restaurants')
 plt.show()
 
 # Fill all the missing values with 0 in dining_3
@@ -199,6 +199,7 @@ fig, ax = plt.subplots()
 ax.bar(dining_3.index, dining_3['latitude'])
 ax.set_xticklabels(dining_3.index, rotation=90)
 ax.set_ylabel('Latitude')
+ax.set_title('Latitude of 3-stars-michelin-restaurants')
 plt.show()
 
 # Plot a bar chart of the longitude of the three-stars-michelin-restaurants
@@ -207,6 +208,7 @@ fig, ax = plt.subplots()
 ax.bar(dining_3.index, dining_3['longitude'])
 ax.set_xticklabels(dining_3.index, rotation=90)
 ax.set_ylabel('Longitude')
+ax.set_title('Longitude of 3-star-michelin-restaurants')
 plt.show()
 
 import matplotlib.pyplot as plt
@@ -216,17 +218,19 @@ sns.scatterplot(x='latitude',
                 y='longitude',
                 data=dining_3,
                 hue='region')
-plt.show()
-
-sns.countplot(x='year',
-              data=dining_2)
 
 plt.show()
 
 sns.countplot(x='year',
-              data=dining_1)
-
+              data=dining_2).set(title='Awarded year of two-michelin-stars-restaurants')
 plt.show()
+
+sns.countplot(x='year',
+              data=dining_1).set(title='Awarded year of one-michelin-star-restaurants')
+plt.show()
+
+
+
 
 
 
