@@ -218,6 +218,17 @@ sns.scatterplot(x='latitude',
                 hue='region')
 plt.show()
 
+sns.countplot(x='year',
+              data=dining_2)
+
+plt.show()
+
+sns.countplot(x='year',
+              data=dining_1)
+
+plt.show()
+
+
 
 
 
