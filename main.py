@@ -232,6 +232,19 @@ sns.countplot(x='year',
               data=dining_1).set(title='Awarded year of one-michelin-star-restaurants')
 plt.show()
 
+# from dining_2 select only column values where region equals to United Kingdom which has the highest restaurant number
+region_list_2 = dining_2.loc[dining_2['region'] == 'United Kingdom']
+print(region_list_2)
+
+# from dining_3 select only column values where region equals to California
+region_list_3 = dining_3.loc[dining_3['region'] == 'California']
+print(region_list_3)
+
+# Merge region_list_2 with region_list_3 on latitude using merge_asof()
+Merged_lists = pd.merge_ordered(region_list_2, region_list_3, on='name', suffixes=('_latitude', '_region'))
+print(Merged_lists)
+
+
 
 
 
