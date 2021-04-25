@@ -148,7 +148,8 @@ print(dining_traits.append('url'))
 
 # Create a list of dictionaries with new data
 dining_3_list = [
-    {'name': 'Alinea', 'longitude': -87.6480, 'city': 'Chicago'}, {'name': 'Le Bernardin', 'longitude': 8561348, 'city': 'New York'},
+    {'name': 'Alinea', 'longitude': -87.6480, 'city': 'Chicago'}, {'name': 'Le Bernardin', 'longitude': 8561348,
+                                                                    'city': 'New York'},
 ]
 
 # Convert list into DataFrame
@@ -165,7 +166,7 @@ import seaborn as sns
 g=sns.catplot(y='region',
             data=dining_2,
             kind='count')
-g.fig.suptitle('Number of restaurants awarded two michelin stars in various regions')
+g.fig.suptitle('Regions with two michelin stars awarded restaurants')
 plt.show()
 
 # Import the three-star-michelin-restaurants.csv data: dining_3
@@ -176,7 +177,7 @@ import seaborn as sns
 g=sns.catplot(y='region',
             data=dining_3,
             kind='count')
-g.fig.suptitle('Number of restaurants awarded three michelin stars in various regions')
+g.fig.suptitle('Regions with three michelin stars awarded restaurants')
 plt.show()
 
 # Import the one-star-michelin-restaurants.csv data: dining_1
@@ -187,10 +188,10 @@ import seaborn as sns
 g=sns.catplot(y='region',
             data=dining_1,
             kind='count')
-g.fig.suptitle('Number of restaurants awarded one michelin star in various regions')
+g.fig.suptitle('Regions with one michelin star awarded restaurants')
 plt.show()
 
-# Import the one-star-michelin-restaurants.csv data: dining_3
+# Import the three-star-michelin-restaurants.csv data: dining_3
 import matplotlib.pyplot as plt
 
 # Plot a bar chart of the latitude of the three-stars-michelin-restaurants
