@@ -47,12 +47,13 @@ print(dining_3.isna().any())
 
 print(dining_3.isna().sum())
 
+# plot the empty values of dining_3 as a bar plot
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 
 dining_3.isna().sum().plot(kind='bar')
 
-# Customise the y  and x axis  and graph labels
+# Customise the y and x axis and graph labels
 ax.set_ylabel('Number of missing values')
 ax.set_xlabel('type of dataset column')
 # Add the title
@@ -103,7 +104,7 @@ mean_latitude_by_year = dining_2.pivot_table(values = 'latitude', index = 'year'
 # Print mean_latitude_by_year
 print(mean_latitude_by_year)
 
-# Import package
+# Import NumPy package
 import numpy as np
 
 # Pivot for mean and median latitude for each year for dining_2
@@ -118,7 +119,7 @@ mean_latitude_by_year = dining_1.pivot_table(values = 'latitude', index = 'year'
 # Print mean_latitude_by_year
 print(mean_latitude_by_year)
 
-# Import package
+# Import NumPy package
 import numpy as np
 
 # Pivot for mean and median latitude for each year for dining_1
@@ -163,6 +164,7 @@ dining_2 = pd.read_csv('two-stars-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# plot a count chart of the regions which have restaurants awarded with 2 michelin stars
 g=sns.catplot(y='region',
             data=dining_2,
             kind='count')
@@ -174,6 +176,7 @@ dining_3 = pd.read_csv('three-stars-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# plot a count chart of the regions which have restaurants awarded with 3 michelin stars
 g=sns.catplot(y='region',
             data=dining_3,
             kind='count')
@@ -185,6 +188,7 @@ dining_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col=0)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# plot a count chart of the regions which have restaurants awarded with 1 michelin star
 g=sns.catplot(y='region',
             data=dining_1,
             kind='count')
@@ -212,7 +216,7 @@ ax.set_ylabel('Longitude')
 ax.set_title('Longitude of 3-star-michelin-restaurants')
 plt.show()
 
-# Search possible correlation between latitude and longitude of 3-michelin-stars-restaurants
+# look for possible correlation between latitude and longitude of 3-michelin-stars-restaurants
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -223,21 +227,21 @@ sns.scatterplot(x='latitude',
 
 plt.show()
 
-# Plot how many restaurants were awarded two michelin stars in 2018 and 2019
+# Plot the number of restaurants awarded two michelin stars in 2018 and 2019
 sns.countplot(x='year',
               data=dining_2).set(title='Awarded year of two-michelin-stars-restaurants')
 plt.show()
 
-# Plot how many restaurants were awarded one michelin stars in 2018 and 2019
+# Plot the number of restaurants awarded one michelin star in 2018 and 2019
 sns.countplot(x='year',
               data=dining_1).set(title='Awarded year of one-michelin-star-restaurants')
 plt.show()
 
-# from dining_2 select only column values where region equals to United Kingdom which has the highest restaurant number
+# from dining_2 select only column values where region equals to United Kingdom (highest number of 2-star-restaurants)
 region_list_2 = dining_2.loc[dining_2['region'] == 'United Kingdom']
 print(region_list_2)
 
-# from dining_3 select only column values where region equals to California
+# from dining_3 select only column values where region equals to California (highest number of 3-star-restaurants)
 region_list_3 = dining_3.loc[dining_3['region'] == 'California']
 print(region_list_3)
 
