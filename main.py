@@ -79,7 +79,7 @@ for key, value in michelin_1.items() :
 import pandas as pd
 dining_1_1 = pd.read_csv('one-star-michelin-restaurants.csv', index_col = 0)
 
-# Iterate over rows of cars
+# Iterate over rows of dining_1_1
 for lab, row in dining_1_1.iterrows() :
     print(lab)
     print(row.head(10))
@@ -243,6 +243,7 @@ print(region_list_3)
 # Merge region_list_2 with region_list_3 on latitude using merge_asof()
 Merged_lists = pd.merge_ordered(region_list_2, region_list_3, on='name', suffixes=('_latitude', '_region'))
 print(Merged_lists)
+
 
 
 
